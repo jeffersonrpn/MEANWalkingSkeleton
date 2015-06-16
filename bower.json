@@ -1,0 +1,33 @@
+{
+  "name": "MEANWalkingSkeleton",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jeffersonrpn/MEANWalkingSkeleton",
+  "authors": [
+    "Jefferson Neves <jefferson.rpn@gmail.com>"
+  ],
+  "description": "A end-to-end simple app build on AngunlarJS, NodeJS, Express and MongoDB",
+  "keywords": [
+    "MEAN",
+    "MEAN",
+    "stack",
+    "AngularJS",
+    "NodeJS",
+    "Express",
+    "MongoDB"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.1",
+    "angular-resource": "~1.4.1",
+    "angular-route": "~1.4.1"
+  }
+}

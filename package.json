@@ -2,7 +2,7 @@
   "name": "MEANWalkingSkeleton",
   "version": "0.0.1",
   "description": "A end-to-end simple app build on AngunlarJS, NodeJS, Express and MongoDB",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,7 @@
     "mongoDB"
   ],
   "author": "Jefferson Neves <jefferson.rpn@gmail.com>",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jeffersonrpn/MEANWalkingSkeleton/issues"
   },
