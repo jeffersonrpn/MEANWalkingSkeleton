@@ -1,0 +1,31 @@
+{
+  "name": "MEANWalkingSkeleton",
+  "version": "0.0.1",
+  "description": "A end-to-end simple app build on AngunlarJS, NodeJS, Express and MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffersonrpn/MEANWalkingSkeleton.git"
+  },
+  "keywords": [
+    "MEAN",
+    "stack",
+    "MEAN",
+    "angularJS",
+    "nodeJS",
+    "express",
+    "mongoDB"
+  ],
+  "author": "Jefferson Neves <jefferson.rpn@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jeffersonrpn/MEANWalkingSkeleton/issues"
+  },
+  "dependencies": {
+    "express": "~4.12.4",
+    "jade": "~1.11.0"
+  }
+}
