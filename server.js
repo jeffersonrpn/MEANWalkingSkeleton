@@ -7,7 +7,7 @@ var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var app = express();
 
 function compile(str, path) {
-	return stylus(srt).set('filename', path);
+	return stylus(str).set('filename', path);
 }
 
 // Views engine
