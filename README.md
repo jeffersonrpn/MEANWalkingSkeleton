@@ -9,3 +9,11 @@ AngularJS
 NodeJS
 Express
 MongoDB
+
+## Node Packages
+
+Stylus: css compiler
+
+## Express libs
+
+Jade Template Engine: render views
