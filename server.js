@@ -23,6 +23,9 @@ app.use(stylus.middleware(
 app.use(express.static(__dirname + '/public'));
 
 // Routes
+app.get('/partials/:path', function (request, response) {
+	response.render('partials/' + request.params.path);
+});
 app.get('*', function (request, response) {
 	response.render('index');
 });
