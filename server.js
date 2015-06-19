@@ -25,7 +25,8 @@ app.use(express.static(__dirname + '/public'));
 
 
 // Persistence
-mongoose.connect('mongodb://localhost/meanstack');
+// mongoose.connect('mongodb://localhost/meanstack');
+mongoose.connect('mongodb://meanstackuser:meanpass@ds047742.mongolab.com:47742/meanstack');
 var db = mongoose.connection;
 db.on('errors', console.error.bind(console, 'connection error...'));
 db.on('open', function callback() {
@@ -48,6 +49,6 @@ app.get('*', function (request, response) {
 	});
 });
 
-var port = 3030;
+var port = process.env.PORT || 3030;
 app.listen(port);
 console.log('Listening on port ' + port + '...');
