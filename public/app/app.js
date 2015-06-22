@@ -9,8 +9,3 @@ angular.module('app')
 				controller: 'mainCtrl'
 			});
 	});
-
-angular.module('app')
-	.controller('mainCtrl', function($scope) {
-		$scope.myVar = "Hello angular";
-	});

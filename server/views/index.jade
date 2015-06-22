@@ -1,8 +1,17 @@
 extends ../inc/layout
 
 block main-content
-  section.content
-    h2 This is the index
+  nav.navbar.navbar-inverse.navbar-fixed-top
+    .container
+      .navbar-header
+        a.navbar-brand(href='/') MEAN
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='https://github.com/jeffersonrpn/MEANWalkingSkeleton') Github
 
-    div(ng-view)
-  h2= mongoMessage
+  div(ng-view)
+
+  footer.container.text-center
+    p Developed by 
+      a(href='https://github.com/jeffersonrpn/') Jefferson Neves

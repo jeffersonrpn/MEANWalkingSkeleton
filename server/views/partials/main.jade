@@ -1,2 +1,10 @@
-h2 This is a partial
-h3 {{ myVar }}
+.container
+  .jumbotron
+    h1 MEAN Walking Skeleton
+    p A <strong>walking skeleton</strong> is a tiny implementation of the system that performs a small end-to-end function.
+    p It should link together the main <strong>architetural</strong> components, from the view to the persistence layer.
+
+  .row
+    .col-sm-6(ng-include="'/partials/panel-angular'")
+      
+    .col-sm-6(ng-include="'/partials/panel-mongo'")
