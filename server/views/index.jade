@@ -6,10 +6,11 @@ block main-content
       .navbar-header
         a.navbar-brand(href='/') MEAN
       .navbar-collapse.collapse
-        ul.nav.navbar-nav.navbar-right
+        ul.nav.navbar-nav
           li
             a(href='https://github.com/jeffersonrpn/MEANWalkingSkeleton') Github
-
+        div(ng-include="'/partials/account/navbar-login'")
+  
   div(ng-view)
 
   footer.container.text-center
