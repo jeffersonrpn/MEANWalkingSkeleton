@@ -1,8 +1,9 @@
 var
 	express = require('express'),
 	stylus = require('stylus'),
+	bodyParser = require('body-parser'),
 	cookieParser = require('cookie-parser'),
-	session = require('express-session'),
+	expressSession = require('express-session'),
 	passport = require('passport');
 
 module.exports = function(app, config) {
@@ -12,8 +13,12 @@ module.exports = function(app, config) {
 
 	app.set('views', config.rootPath + '/server/views');
 	app.set('view engine', 'jade');
+	app.use(bodyParser.urlencoded({
+		extended: true
+	}));
+	app.use(bodyParser.json());
 	app.use(cookieParser());
-	app.use(session({
+	app.use(expressSession({
 		secret: 'mysecretword',
 		resave: false,
 		saveUninitialized: true,
