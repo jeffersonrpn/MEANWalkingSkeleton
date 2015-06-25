@@ -15,7 +15,7 @@ module.exports = function(app, config) {
 	app.set('views', config.rootPath + '/server/views');
 	app.set('view engine', 'jade');
 	app.use(express.static(config.rootPath + '/public'));
-	app.use(logger('combined'));
+	app.use(logger('tiny'));
 	app.use(bodyParser.urlencoded({
 		extended: false
 	}));
@@ -23,9 +23,8 @@ module.exports = function(app, config) {
 	app.use(cookieParser('mysecrethere'));
 	app.use(expressSession({
 		secret: 'mysecretword',
-		resave: false,
-		saveUninitialized: true,
-		cookie: { secure: true }
+		resave: true,
+		saveUninitialized: true
 	}));
 	app.use(passport.initialize());
 	app.use(passport.session());
