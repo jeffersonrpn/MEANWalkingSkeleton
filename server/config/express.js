@@ -4,7 +4,8 @@ var
 	bodyParser = require('body-parser'),
 	cookieParser = require('cookie-parser'),
 	expressSession = require('express-session'),
-	passport = require('passport');
+	passport = require('passport'),
+    logger = require('morgan');
 
 module.exports = function(app, config) {
 	function compile(str, path) {
@@ -13,11 +14,13 @@ module.exports = function(app, config) {
 
 	app.set('views', config.rootPath + '/server/views');
 	app.set('view engine', 'jade');
+	app.use(express.static(config.rootPath + '/public'));
+	app.use(logger('combined'));
 	app.use(bodyParser.urlencoded({
-		extended: true
+		extended: false
 	}));
 	app.use(bodyParser.json());
-	app.use(cookieParser());
+	app.use(cookieParser('mysecrethere'));
 	app.use(expressSession({
 		secret: 'mysecretword',
 		resave: false,
@@ -32,5 +35,4 @@ module.exports = function(app, config) {
 			compile: compile
 		}
 	));
-	app.use(express.static(config.rootPath + '/public'));
 };
