@@ -6,5 +6,7 @@
       input.form-control(placeholder="Password", type="password", ng-model="password")
     button.btn.btn-primary(ng-click="signin(username, password)") Sign in
   ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
+    li(ng-show="identity.currentUser.isAdmin()")
+      a(href="/admin/users") Admin
     li
       a(href="", ng-click="signout()") Sign out

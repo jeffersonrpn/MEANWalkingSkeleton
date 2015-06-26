@@ -1,11 +1,13 @@
-angular.module('app').factory('auth', function($http, identity, $q) {
+angular.module('app').factory('auth', function($http, identity, $q, userService) {
 	return {
 		authenticateUser: function(username, password) {
 			var defer = $q.defer();
 			$http.post('/login', { username: username, password: password })
 				.then(function(response) {
 					if (response.data.success) {
-						identity.currentUser = response.data.user;
+						var user = new userService();
+						angular.extend(user, response.data.user);
+						identity.currentUser = user;
 						defer.resolve(true);
 					} else {
 						defer.resolve(false);
