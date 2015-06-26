@@ -1,8 +1,8 @@
 angular.module('app').factory('identity', function($window, userService) {
 	var currentUser;
 	if (!!$window.bootstrappedUserObject) {
-		currenUser = new userService();
-		angular.extend(currenUser, $window.bootstrappedUserObject);
+		currentUser = new userService();
+		angular.extend(currentUser, $window.bootstrappedUserObject);
 		return {
 			currentUser: currentUser,
 			isAuthenticated: function() {
