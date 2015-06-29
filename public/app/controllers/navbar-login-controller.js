@@ -1,6 +1,7 @@
 angular.module('app')
 	.controller('navbarLoginCtrl', function($scope, $http, identity, notifier, auth, $location) {
 		$scope.identity = identity;
+		console.log(identity);
 		$scope.signin = function(username, password) {
 			auth.authenticateUser(username, password).then(function(success) {
 				if (success) {
