@@ -3,7 +3,7 @@ angular.module('app')
 		var UserResource = $resource('/api/users/:id', { _id: "@id" });
 
 		UserResource.prototype.isAdmin = function() {
-			return this.role && this.role.indexOf('admin') > -1;
+			return this.roles && this.roles.indexOf('admin') > -1;
 		};
 
 		return UserResource;
