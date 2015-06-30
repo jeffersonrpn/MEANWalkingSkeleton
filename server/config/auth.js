@@ -15,3 +15,23 @@ exports.authenticate = function (request, response, next) {
 	});
 	auth(request, response, next);
 };
+
+exports.requiresAuth = function (request, response, next) {
+	if (!request.isAuthenticated()) {
+		response.status(403);
+		response.end();
+	} else {
+		next();
+	}
+};
+
+exports.requiresRole = function (role) {
+	return function (request, response, next) {
+		if (!request.isAuthenticated() || request.user.roles.indexOf(role) === -1) {
+			response.status(403);
+			response.end();
+		} else {
+			next();
+		}
+	};
+};
