@@ -10,7 +10,7 @@ module.exports = {
 	},
 	production: {
 		rootPath: rootPath,
-		db: 'mongodb://meanstackuser:meanpass@ds047742.mongolab.com:47742/meanstack',
+		db: 'mongodb://meanstackuser:secretpass@xxxxxx.mongolab.com:xxxx/meanstack',
 		port: process.env.PORT || 80
 	}
 };
