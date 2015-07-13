@@ -1,7 +1,7 @@
 MEAN Walking Skeleton
 =====
 
-A end-to-end simple app build on AngunlarJS, NodeJS, Express and MongoDB.
+A end-to-end simple app build on AngularJS, NodeJS, Express and MongoDB.
 
 A walking skeleton is a tiny implementation of the system that performs a small end-to-end function. It should link together the main architetural components, from the view to the persistence layer.
 
